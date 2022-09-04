@@ -12,9 +12,6 @@ class StockService {
         const item = stocks.filter((stock) => stock.sku === sku);
         const transactionsBySku = transactions.filter((tx) => tx.sku === sku);
 
-        console.log("item =>>>>",item);
-        console.log("transactionsBySku =>>>>",transactionsBySku);
-        
         if((item.length || transactionsBySku.length) == 0){
             return new Response({},"Unit not found!");
         }
